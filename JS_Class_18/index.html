@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input onkeyup="changeCurrency('usd')"  id="usd"> USD
+    <br>
+    <input  name="" id="pkr"> PKR
+
+
+    <script>
+    function changeCurrency(){
+        var currency = document.getElementById('usd').value
+        var changedCurrency = currency * 239.65;
+        var currencyToChange = document.getElementById("pkr");
+        currencyToChange.value = changedCurrency;
+    }
+    </script>
+</body>
+</html>
