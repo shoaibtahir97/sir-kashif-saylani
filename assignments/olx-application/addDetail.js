@@ -6,7 +6,7 @@ const form = document.getElementById("form");
 
 
 function getImage(e) { //event ko get kia
-    const file = e.target.files[0,1,2,3]  //constant bnaya jis me evnet ki files. Files hamesha array me ati hain is liye [0] use kiya hai
+    const file = e.target.files[0]  //constant bnaya jis me evnet ki files. Files hamesha array me ati hain is liye [0] use kiya hai
     const imgElem = document.getElementsByTagName('img') // img k element ko get kia from addDetail 
 
     const reader = new FileReader() //sir ka code
