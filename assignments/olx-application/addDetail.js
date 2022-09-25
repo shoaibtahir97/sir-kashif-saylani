@@ -19,8 +19,7 @@ function getImage(e) { //event ko get kia
 }
 
 function createAdd() {
-  let ads = JSON.parse(localStorage.getItem('ads') || "[]");;
-
+  let ads = JSON.parse(localStorage.getItem('ads') || "[]"); // how we get multiple data........no idea wtf happened
   function Ad(adTitle, description, price) {
     this.adTitle = adTitle;
     this.description = description;
@@ -30,7 +29,7 @@ function createAdd() {
   ads.push(new Ad(adTitle.value, description.value, price.value));
 
   localStorage.setItem("ads", JSON.stringify(ads));
-  alert("Your add has been posted Successfully", location.replace("http://127.0.0.1:5500/home.html"))
+  alert("Your add has been posted Successfully", location.replace("http://127.0.0.1:5501/home.html"))
 }
 
 form.addEventListener("submit", function (e) {

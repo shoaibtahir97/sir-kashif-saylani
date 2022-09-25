@@ -1,5 +1,5 @@
 let data = JSON.parse(localStorage.getItem("ads"));
-
+ 
 for(let i = 0; i < data.length; i++){
   var container = document.getElementById("fluid-container");
 
