@@ -1,0 +1,32 @@
+.navbar .container .nav-link .btn-light {
+    border: 20px solid ;
+    padding: 0px 15px;
+    position: relative;
+    border-image: url("/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg") 20 stretch;
+    background-color: #F8F9FA;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-image{
+    margin: 20px 0px 20px 0px;
+}
+
+#fluid-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#fluid-container .card img{
+    height: 250px;
+}
+#fluid-container .card {
+ margin-top: 20px;
+    
+}
+/* .navbar .container-fluid .nav-link .btn-light:after {
+    background: linear-gradient(to right, #bcbcbc 25%,#ffcd02 25%, #ffcd02 50%, #e84f47 50%, #e84f47 75%, #65c1ac 75%);
+    position: absolute;
+} */

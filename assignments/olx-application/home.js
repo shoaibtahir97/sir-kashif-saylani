@@ -12,7 +12,7 @@ for(let i = 0; i < data.length; i++){
   <p class="card-text">${data[i].description}</p>
   <p class="card-text"><b>${data[i].price}</b></p>
 
-  <a href="#" class="btn btn-primary">Go somewhere</a>
+  <a href="#" class="btn btn-primary">View Details</a>
 </div>
 </div>
 `;
