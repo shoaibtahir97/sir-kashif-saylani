@@ -3,10 +3,9 @@ const description = document.getElementById("description");
 const price = document.getElementById("price");
 const form = document.getElementById("form");
 
-let image ;
+let image;
 
-
-function getImage(e) { //event ko get kia
+window.getImage = function (e) { //event ko get kia
     const file = e.target.files[0]  //constant bnaya jis me evnet ki files. Files hamesha array me ati hain is liye [0] use kiya hai
     // const imgElem = document.getElementsByTagName('img') // img k element ko get kia from addDetail 
 
@@ -23,21 +22,21 @@ function getImage(e) { //event ko get kia
 
 function createAdd() {
   let ads = JSON.parse(localStorage.getItem('ads') || "[]"); // how we get multiple data........no idea wtf happened
-  function Ad(adTitle, description, price, image) {
+
+  let id= Math.floor(Math.random()* 100)
+  
+  function Ad(adTitle, description, price, image, id) {
     this.adTitle = adTitle;
     this.description = description;
     this.price = price;
     this.image = image
+    this.id = id
   }
 
-  
-
-  ads.push(new Ad(adTitle.value, description.value, price.value, image));
-
-
+  ads.push(new Ad(adTitle.value, description.value, price.value, image, id));
 
   localStorage.setItem("ads", JSON.stringify(ads));
-  alert("Your add has been posted Successfully", location.replace("http://127.0.0.1:5501/home.html"))
+  alert("Your add has been posted Successfully", location.replace("/home.html"))
 }
 
 form.addEventListener("submit", function (e) {
