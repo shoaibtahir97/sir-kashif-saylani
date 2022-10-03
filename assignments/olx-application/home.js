@@ -1,15 +1,9 @@
-
 let data = JSON.parse(localStorage.getItem("ads"));
 
-// function showAdDetails(adId) {
-//   location.replace("file:///home/shoaib97/Desktop/sir-kashif-saylani/assignments/olx-application/details.html#")
-//   // console.log(adId)
-// }
-
-// function showAdDetails(adId){
-//   alert("Ad Id --->", adId)
-// }
-// let adId;
+function createId(id){
+  localStorage.setItem("adId", JSON.stringify(id))
+  window.location.href = "/details.html"
+}
 
   function showAd(){  
     for (let i = 0; i < data.length; i++) {
@@ -24,7 +18,7 @@ let data = JSON.parse(localStorage.getItem("ads"));
         <h5 id="title" class="card-title">${data[i].adTitle}</h5>
         <p class="card-text">${data[i].description}</p>
         <p class="card-text"><b>${data[i].price}</b></p>
-        <a onclick="showAdDetails(${data[i].id})"  class="btn btn-primary">View Details</a>
+        <a onclick="createId(${data[i].id})" class="btn btn-primary">View Details</a>
       </div>`;
       container.appendChild(ddiv)
     }
